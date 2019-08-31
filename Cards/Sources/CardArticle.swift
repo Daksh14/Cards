@@ -45,7 +45,7 @@ import UIKit
     }
 
     //Priv Vars
-    var titleLbl = UILabel ()
+    public var titleLbl = UILabel ()
     var subtitleLbl = UILabel()
     var categoryLbl = UILabel()
 
