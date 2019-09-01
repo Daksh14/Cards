@@ -45,8 +45,9 @@ import UIKit
     }
 
     //Priv Vars
-    public var titleLbl = UILabel ()
+    public var titleLbl = UILabel()
     var subtitleLbl = UILabel()
+    public var profileImage = UIImageView()
     var categoryLbl = UILabel()
 
     // View Life Cycle
@@ -62,6 +63,7 @@ import UIKit
     override open func initialize() {
         super.initialize()
 
+        backgroundIV.addSubview(profileImage)
         backgroundIV.addSubview(titleLbl)
         backgroundIV.addSubview(subtitleLbl)
         backgroundIV.addSubview(categoryLbl)
@@ -103,6 +105,8 @@ import UIKit
         subtitleLbl.numberOfLines = 0
         subtitleLbl.textAlignment = .left
 
+        profileImage.translatesAutoresizingMaskIntoConstraints = false
+
         self.layout()
 
     }
@@ -126,6 +130,10 @@ import UIKit
                                    y: gimme.RevY(0, height: gimme.Y(14)) - insets,
                                    width: gimme.X(80),
                                    height: gimme.Y(14))
+        profileImage.frame = CGRect(x: insets,
+                                    y: insets,
+                                    width: gimme.X(80),
+                                    height: gimme.Y(17))
         titleLbl.sizeToFit()
     }
 
