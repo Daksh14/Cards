@@ -87,7 +87,6 @@ import UIKit
 
         titleLbl.textColor = textColor
         titleLbl.text = title
-        titleLbl.font = UIFont.systemFont(ofSize: titleSize, weight: .bold)
         titleLbl.adjustsFontSizeToFitWidth = true
         titleLbl.minimumScaleFactor = 0.1
         titleLbl.lineBreakMode = .byClipping
